@@ -1,4 +1,4 @@
-package mgrav.ingsoftwareproject;
+package mgrav.ComplexNumberCalculator;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -21,9 +21,6 @@ import java.io.IOException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import mgrav.ingsoftwareproject.exceptions.*;
-import mgrav.ingsoftwareproject.exceptions.EmptyStackException;
 
 public class CalculatorController {
     @FXML
@@ -202,7 +199,7 @@ public class CalculatorController {
         visioneSchermo.setText("0");
     }
 
-    public void enter(ActionEvent actionEvent) throws EmptyStackException {
+    public void enter(ActionEvent actionEvent) {
         //If the text is a variable, the method variableOperations is invoked
         if(matcherVariables())
             variableOperations();
@@ -279,7 +276,7 @@ public class CalculatorController {
     }
 
     /*This method performs the division and the multiplication*/
-    public void operazione(ActionEvent actionEvent) throws EmptyStackException {
+    public void operazione(ActionEvent actionEvent){
         if(stack.lengthStack()<2)
             inserimentoNumero(actionEvent);
         else {
@@ -300,7 +297,7 @@ public class CalculatorController {
     }
 
     /*This method performs the square root and the sign inversion*/
-    public void altraOperazione(ActionEvent actionEvent) throws EmptyStackException {
+    public void altraOperazione(ActionEvent actionEvent) {
         ComplexNumber a=stack.pop();
         Button bottone = (Button) actionEvent.getSource();
         switch (bottone.getText()){
@@ -316,7 +313,7 @@ public class CalculatorController {
     }
 
     /*This method is used to handle the variables, using the Hash Map as structure*/
-    public void variableOperations() throws EmptyStackException {
+    public void variableOperations(){
         char operator= visioneSchermo.getText().charAt(0);
         char variable= visioneSchermo.getText().charAt(1);
         if(operator=='>'){

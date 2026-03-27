@@ -1,8 +1,8 @@
 package mgrav.ComplexNumberCalculator;
 
-import mgrav.ComplexNumberCalculator.exceptions.InvalidOperationException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import mgrav.ComplexNumberCalculator.exceptions.InvalidOperationException;
 
 public class ComplexNumber {
     private Double real;

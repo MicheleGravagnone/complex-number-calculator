@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import mgrav.ComplexNumberCalculator.ComplexNumber;
+import mgrav.ComplexNumberCalculator.StackManagement;
+
 import java.util.HashMap;
 import java.util.Map;
 

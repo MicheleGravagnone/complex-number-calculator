@@ -4,6 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import mgrav.ComplexNumberCalculator.ComplexNumber;
+import mgrav.ComplexNumberCalculator.StackManagement;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackManagementTest {
