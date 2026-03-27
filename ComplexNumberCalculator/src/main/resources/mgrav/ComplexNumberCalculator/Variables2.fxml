@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="350.0" stylesheets="@CalculatorStyle.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mgrav.ComplexNumberCalculator.CalculatorController">
+   <children>
+      <VBox layoutX="64.0" layoutY="58.0" prefHeight="315.0" prefWidth="232.0">
+         <children>
+            <Label fx:id="visioneSchermo" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="232.0" />
+            <GridPane prefHeight="259.0" prefWidth="263.0" styleClass="gridPane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="t" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="q" GridPane.rowIndex="1" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="r" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" styleClass="numberAndVariableButton" text="s" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="u" GridPane.rowIndex="2" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="v" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" styleClass="numberAndVariableButton" text="w" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="variable" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" styleClass="numberAndVariableButton" text="y" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="buttonC" mnemonicParsing="false" onAction="#cancellaSingoloInserimento" styleClass="perimeterButton" text="C" GridPane.columnIndex="1" />
+                  <Button fx:id="buttonAC" mnemonicParsing="false" onAction="#cancellaNumero" styleClass="perimeterButton" text="AC" />
+                  <Button mnemonicParsing="false" onAction="#enter" styleClass="perimeterButton" GridPane.columnIndex="2" >
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" onMouseClicked="#enter">
+                           <image>
+                              <Image url="@mgrav.ComplexNumberCalculator.img/Enter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToVariables1Display" styleClass="perimeterButton" GridPane.columnIndex="3">
+                     <graphic>
+                        <ImageView fx:id="Arrowimg" fitHeight="31.0" fitWidth="31.0" onMouseClicked="#switchToVariables2Display" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@mgrav.ComplexNumberCalculator.img/Arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonZ" styleClass="numberAndVariableButton" mnemonicParsing="false" onAction="#inserimentoVariabile" prefHeight="45.0" prefWidth="0.0" text="z" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox fx:id="HBox" alignment="CENTER" prefHeight="55.0" prefWidth="360.0" spacing="30.0">
+         <children>
+            <Button fx:id="buttonCalculator" mnemonicParsing="false" onAction="#switchToCalculatorDisplay" styleClass="topButton" text="Calculator" />
+            <Button fx:id="buttonVariabili" mnemonicParsing="false" onAction="#switchToVariables1Display" styleClass="topButton" text="Variable" />
+            <Button fx:id="buttonStack" mnemonicParsing="false" onAction="#switchToStack" styleClass="topButton" text="Stack" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
