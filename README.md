@@ -119,7 +119,7 @@ Example: Division by zero in complex numbers is safely handled.
 
 ## How to Run
 1. Clone the repository:
-`git clone <your-repo-url>`
+`git clone <this-repo-url>`
 
 2. Open the project in an IDE (IntelliJ / Eclipse)
 
